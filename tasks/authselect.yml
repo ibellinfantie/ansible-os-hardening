@@ -1,0 +1,31 @@
+---
+
+- name: configure authselect
+  template:
+    src: 'etc/authselect/authselect.conf.j2'
+    dest: '/etc/authselect/authselect.conf'
+    owner: 'root'
+    group: 'root'
+    mode: '0640'
+
+
+- name: configure passwd-auth
+  template:
+    src: 'etc/authselect/password-auth.j2'
+    dest: '/etc/authselect/password-auth'
+    owner: 'root'
+    group: 'root'
+    mode: '0640'
+
+
+- name: configure system-auth
+  template:
+    src: 'etc/authselect/system-auth.j2'
+    dest: '/etc/authselect/system-auth'
+    owner: 'root'
+    group: 'root'
+    mode: '0640'
+
+
+
+

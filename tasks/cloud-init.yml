@@ -1,0 +1,9 @@
+---
+
+- name: configure cloud-init networking
+  template:
+    src: 'etc/99-disable-network-config.cfg.j2'
+    dest: '/etc/cloud/cloud.cfg.d/99-disable-network-config.cfg'
+    owner: 'root'
+    group: 'root'
+    mode: '0640'

@@ -12,3 +12,28 @@
     owner: 'root'
     group: 'root'
     mode: '0640'
+
+- name: configure auditd rules
+  template:
+    src: 'etc/audit/rules.d/audit.rules.j2'
+    dest: '/etc/audit/rules.d/audit.rules'
+    owner: 'root'
+    group: 'root'
+    mode: '0640'
+
+- name: configure auditd MAC Policy
+  template:
+    src: 'etc/audit/rules.d/MAC-policy.rules.j2'
+    dest: '/etc/audit/rules.d/MAC-policy.rules'
+    owner: 'root'
+    group: 'root'
+    mode: '0640'
+
+- name: configure auditd scope rules
+  template:
+    src: 'etc/audit/rules.d/audit.scope.j2'
+    dest: '/etc/audit/rules.d/scope.rules'
+    owner: 'root'
+    group: 'root'
+    mode: '0640'
+    

@@ -1,8 +1,8 @@
 os_desktop_enable: false
 os_env_extra_user_paths: []
-os_auth_pw_max_age: 60
-os_auth_pw_min_age: 7 # discourage password cycling
-os_auth_retries: 5
+os_auth_pw_max_age: 90
+os_auth_pw_min_age: 8  # discourage password cycling
+os_auth_retries: 3
 os_auth_lockout_time: 600 # 10min
 os_auth_timeout: 60
 os_auth_allow_homeless: false
@@ -13,9 +13,9 @@ os_auth_root_ttys: [console, tty1, tty2, tty3, tty4, tty5, tty6]
 
 os_chfn_restrict: ''
 # may contain: change_user
-os_security_users_allow: []
+os_security_users_allow: [scan]
 # specify system accounts those login should not be disabled and password not changed
-os_ignore_users: ['vagrant', 'kitchen']
+os_ignore_users: [scan]
 os_security_kernel_enable_module_loading: true
 os_security_kernel_enable_core_dump: false
 os_security_suid_sgid_enforce: true
@@ -166,6 +166,17 @@ sysctl_config:
   # * **256** - nicing of all RT tasks
   kernel.sysrq: 0
 
+  kernel.shmmax: 4083679232
+  kernel.shmall: 1993984
+  kernel.sem: 250 32000 100 128
+  kernel.shmmni: 4096
+  vm.swappiness: 0
+  vm.dirty_background_ratio: 3
+  vm.dirty_ratio: 15
+  vm.dirty_expire_centisecs: 500
+  vm.dirty_writeback_centisecs: 100
+
+
   # Prevent core dumps with SUID. These are usually only
   # needed by developers and may contain sensitive information. | sysctl-31
   fs.suid_dumpable: 0
@@ -218,8 +229,8 @@ sysctl_config:
   # These settings are set to the maximum supported value in order to
   # improve ASLR effectiveness for mmap, at the cost of increased
   # address-space fragmentation. | Tail-1
-  vm.mmap_rnd_bits: 32
-  vm.mmap_rnd_compat_bits: 16
+  #vm.mmap_rnd_bits: 32
+  #vm.mmap_rnd_compat_bits: 16
 
   # When an attacker is trying to exploit the local kernel, it is often
   # helpful to be able to examine where in memory the kernel, modules,
@@ -237,10 +248,10 @@ sysctl_config:
   # to check which kernel Tails is running and then fetch the corresponding
   # kernel address map from some external source. This is not hard,
   # but certainly not all malware has such functionality. | Tails-2
-  kernel.kptr_restrict: 2
+  #kernel.kptr_restrict: 2
 
   # kexec is dangerous: it enables replacement of the running kernel. | Tails-3
-  kernel.kexec_load_disabled: 1
+  # kernel.kexec_load_disabled: 1
 
 # Do not delete the following line or otherwise the playbook will fail
 # at task 'create a combined sysctl-dict if overwrites are defined'
@@ -256,6 +267,11 @@ os_unused_filesystems:
   - "squashfs"
   - "udf"
   - "vfat"
+  - "usb-storage"
+  - "dccp"
+  - "sctp"
+  - "rds"
+  - "tipc"  
   # Obsolete network protocols that should be disabled
   # per CIS Oracle Linux 6 Benchmark (2016)
   - "tipc" # CIS 3.5.4
@@ -272,7 +288,7 @@ os_hardening_enabled: true
 
 # Set to false to disable installing and configuring auditd.
 os_auditd_enabled: true
-os_auditd_max_log_file_action: keep_logs
+os_auditd_max_log_file_action: rotate
 
 # Set the SELinux state, can be either disabled, permissive, or enforcing.
 os_selinux_state: enforcing

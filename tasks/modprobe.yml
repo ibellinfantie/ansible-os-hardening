@@ -17,7 +17,7 @@
 - name: disable unused filesystems | os-10
   template:
     src: 'etc/modprobe.d/modprobe.j2'
-    dest: '/etc/modprobe.d/dev-sec.conf'
+    dest: '/etc/modprobe.d/modules.conf'
     owner: 'root'
     group: 'root'
     mode: '0644'

@@ -1,0 +1,9 @@
+---
+
+- name: configure greeter
+  template:
+    src: 'etc/gdm3/greeter.dconf-defaults.j2'
+    dest: '/etc/gdm3/greeter.dconf-defaults'
+    owner: 'root'
+    group: 'root'
+    mode: '0640'

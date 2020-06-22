@@ -1,0 +1,9 @@
+---
+- name: configure default bashrc
+  template:
+    src: 'etc/bashrc.j2'
+    dest: '/etc/bashrc'
+    owner: 'root'
+    group: 'root'
+    mode: '0750'
+    

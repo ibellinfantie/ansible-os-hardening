@@ -1,0 +1,17 @@
+---
+
+- name: configure cron
+  template:
+    src: 'etc/at.allow.j2'
+    dest: '/etc/at.allow'
+    owner: 'root'
+    group: 'root'
+    mode: '0750'
+    
+  template:
+    src: 'etc/cron.allow.j2'
+    dest: '/etc/cron.allow'
+    owner: 'root'
+    group: 'root'
+    mode: '0750'
+ 

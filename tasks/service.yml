@@ -1,0 +1,21 @@
+---
+
+- name: configure emergency shell
+  template:
+    src: 'usr/lib/systemd/system/emergency.service.j2'
+    dest: '/usr/lib/systemd/system/emergency.service'
+    owner: 'root'
+    group: 'root'
+    mode: '0640'
+
+
+- name: configure rescue shell
+  template:
+    src: 'usr/lib/systemd/system/rescue.service.j2'
+    dest: '/usr/lib/systemd/system/rescue.service'
+    owner: 'root'
+    group: 'root'
+    mode: '0640'
+    
+
+
