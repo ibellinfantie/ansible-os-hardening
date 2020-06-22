@@ -147,17 +147,17 @@
     group: 'root'
     mode: '0750'
 
-- name: add wish2.csh and sh to profile.d
+- name: add which2.csh and sh to profile.d
   template:
-    src: 'etc/profile.d/wish2.csh.j2'
-    dest: '/etc/profile.d/wish2.csh'
+    src: 'etc/profile.d/which2.csh.j2'
+    dest: '/etc/profile.d/which2.csh'
     owner: 'root'
     group: 'root'
     mode: '0750'
 
   template:
-    src: 'etc/profile.d/wish2.sh.j2'
-    dest: '/etc/profile.d/wish2.sh'
+    src: 'etc/profile.d/which2.sh.j2'
+    dest: '/etc/profile.d/which2.sh'
     owner: 'root'
     group: 'root'
     mode: '0750'
