@@ -1,0 +1,5 @@
+---
+- name: Banque Saudi Fransi Security Hardening
+  hosts: all
+  roles:
+    - ansible-os-hardening
