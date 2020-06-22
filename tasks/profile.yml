@@ -41,14 +41,14 @@
 - name: add colorzgrep.csh and sh to profile.d
   template:
     src: 'etc/profile.d/colorzgrep.csh.j2'
-    dest: 'etc/profile.d/colorzgrep.csh'
+    dest: '/etc/profile.d/colorzgrep.csh'
     owner: 'root'
     group: 'root'
     mode: '0750'
 
   template:
     src: 'etc/profile.d/colorzgrep.sh.j2'
-    dest: 'etc/profile.d/colorzgrep.sh'
+    dest: '/etc/profile.d/colorzgrep.sh'
     owner: 'root'
     group: 'root'
     mode: '0750'
@@ -57,14 +57,14 @@
 - name: add colorls.csh and sh to profile.d
   template:
     src: 'etc/profile.d/colorls.csh.j2'
-    dest: 'etc/profile.d/colorls.csh'
+    dest: '/etc/profile.d/colorls.csh'
     owner: 'root'
     group: 'root'
     mode: '0750'
 
   template:
     src: 'etc/profile.d/colorls.sh.j2'
-    dest: 'etc/profile.d/colorls.sh'
+    dest: '/etc/profile.d/colorls.sh'
     owner: 'root'
     group: 'root'
     mode: '0750'
@@ -72,14 +72,14 @@
 - name: add colorxzgrep.csh and sh to profile.d
   template:
     src: 'etc/profile.d/colorxzgrep.csh.j2'
-    dest: 'etc/profile.d/colorxzgrep.csh'
+    dest: '/etc/profile.d/colorxzgrep.csh'
     owner: 'root'
     group: 'root'
     mode: '0750'
 
   template:
     src: 'etc/profile.d/colorxzgrep.sh.j2'
-    dest: 'etc/profile.d/colorxzgrep.sh'
+    dest: '/etc/profile.d/colorxzgrep.sh'
     owner: 'root'
     group: 'root'
     mode: '0750'
@@ -87,14 +87,14 @@
 - name: add gawk.csh and sh to profile.d
   template:
     src: 'etc/profile.d/gawk.csh.j2'
-    dest: 'etc/profile.d/gawk.csh'
+    dest: '/etc/profile.d/gawk.csh'
     owner: 'root'
     group: 'root'
     mode: '0750'
 
   template:
     src: 'etc/profile.d/gawk.sh.j2'
-    dest: 'etc/profile.d/gawk.sh'
+    dest: '/etc/profile.d/gawk.sh'
     owner: 'root'
     group: 'root'
     mode: '0750'
@@ -103,14 +103,14 @@
 - name: add lang.csh and sh to profile.d
   template:
     src: 'etc/profile.d/lang.csh.j2'
-    dest: 'etc/profile.d/lang.csh'
+    dest: '/etc/profile.d/lang.csh'
     owner: 'root'
     group: 'root'
     mode: '0750'
 
   template:
     src: 'etc/profile.d/lang.sh.j2'
-    dest: 'etc/profile.d/lang.sh'
+    dest: '/etc/profile.d/lang.sh'
     owner: 'root'
     group: 'root'
     mode: '0750'
@@ -120,14 +120,14 @@
 - name: add less.csh and sh to profile.d
   template:
     src: 'etc/profile.d/less.csh.j2'
-    dest: 'etc/profile.d/less.csh'
+    dest: '/etc/profile.d/less.csh'
     owner: 'root'
     group: 'root'
     mode: '0750'
 
   template:
     src: 'etc/profile.d/less.sh.j2'
-    dest: 'etc/profile.d/less.sh'
+    dest: '/etc/profile.d/less.sh'
     owner: 'root'
     group: 'root'
     mode: '0750'
@@ -135,14 +135,14 @@
 - name: add vim.csh and sh to profile.d
   template:
     src: 'etc/profile.d/vim.csh.j2'
-    dest: 'etc/profile.d/vim.csh'
+    dest: '/etc/profile.d/vim.csh'
     owner: 'root'
     group: 'root'
     mode: '0750'
 
   template:
     src: 'etc/profile.d/vim.sh.j2'
-    dest: 'etc/profile.d/vim.sh'
+    dest: '/etc/profile.d/vim.sh'
     owner: 'root'
     group: 'root'
     mode: '0750'
@@ -150,14 +150,14 @@
 - name: add wish2.csh and sh to profile.d
   template:
     src: 'etc/profile.d/wish2.csh.j2'
-    dest: 'etc/profile.d/wish2.csh'
+    dest: '/etc/profile.d/wish2.csh'
     owner: 'root'
     group: 'root'
     mode: '0750'
 
   template:
     src: 'etc/profile.d/wish2.sh.j2'
-    dest: 'etc/profile.d/wish2.sh'
+    dest: '/etc/profile.d/wish2.sh'
     owner: 'root'
     group: 'root'
     mode: '0750'
