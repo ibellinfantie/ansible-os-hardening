@@ -7,8 +7,9 @@
     owner: 'root'
     group: 'root'
     mode: '0640'
-    when: ansible_facts.os_family == 'RedHat' and ansible_facts.distribution_major_version == "8") 
-
+    when:
+      - ansible_facts['distribution'] == "RedHat"
+      - ansible_facts['distribution_major_version'] == "8"
 
 - name: configure passwd-auth
   template:
@@ -17,7 +18,9 @@
     owner: 'root'
     group: 'root'
     mode: '0640'
-    when: ansible_facts.os_family == 'RedHat' and ansible_facts.distribution_major_version == "8")
+    when:
+      - ansible_facts['distribution'] == "RedHat"
+      - ansible_facts['distribution_major_version'] == "8"
 
 
 - name: configure system-auth
@@ -27,7 +30,9 @@
     owner: 'root'
     group: 'root'
     mode: '0640'
-    when: ansible_facts.os_family == 'RedHat' and ansible_facts.distribution_major_version == "8")
+    when:
+      - ansible_facts['distribution'] == "RedHat"
+      - ansible_facts['distribution_major_version'] == "8"
 
 
 

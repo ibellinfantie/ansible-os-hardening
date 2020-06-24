@@ -107,9 +107,6 @@
 - import_tasks: cron.yml
   tags: crond
 
-- import_tasks: ftpusers.yml
-  tags: ftpd
-
 - import_tasks: snmpd.yml
   tags: snmpd
 
