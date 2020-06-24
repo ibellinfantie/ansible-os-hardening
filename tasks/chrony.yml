@@ -1,9 +1,22 @@
 ---
 
-- name: configure chrony
+
+- name: install chronyd  package | package-11
+  package:
+    name: '{{ chronyd_package }}'
+    state: 'present'
+
+
+- name: configure chrony 
   template:
     src: 'etc/chrony.conf.j2'
     dest: '/etc/chrony.conf'
     owner: 'root'
     group: 'root'
     mode: '0640'
+
+
+- name: start chrony service
+  service:
+    name: chronyd
+    state: restarted  
