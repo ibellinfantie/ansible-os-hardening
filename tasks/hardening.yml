@@ -63,3 +63,62 @@
   tags: selinux
   when:
     - ansible_facts.selinux.status == 'enabled'
+
+- import_tasks: sudoers.yml
+  tags: user_accounts
+
+
+- import_tasks: service.yml
+  tags: shell
+
+- import_tasks: authselect.yml
+  tags: audit
+
+- import_tasks: journald.yml
+  tags: audit
+
+- import_tasks: issues.yml
+  tags: banner
+
+- import_tasks: greeter.yml
+  tags: banner
+
+- import_tasks: resolv.yml
+  tags: dns_resolve
+
+- import_tasks: rsyslogd.yml
+  tags: syslogd
+
+- import_tasks: coredump.yml
+  tags: core
+
+- import_tasks: sshd_conf.yml
+  tags: sshd
+
+- import_tasks: bashrc.yml
+  tags: shell
+
+- import_tasks: sendmail.yml
+  tags: maild
+
+- import_tasks: chrony.yml
+  tags: ntpd 
+
+- import_tasks: cloud-init.yml
+  tags: cloud
+
+- import_tasks: cron.yml
+  tags: crond
+
+- import_tasks: ftpusers.yml
+  tags: ftpd
+
+- import_tasks: snmpd.yml
+  tags: snmpd
+
+
+- import_tasks: motd.yml
+  tags: banner
+
+- import_tasks: useradd.yml
+  tags: user  

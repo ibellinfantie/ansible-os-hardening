@@ -33,3 +33,4 @@ os_useradd_create_home: true
 
 modprobe_package: 'module-init-tools'
 auditd_package: 'audit'
+sudo_package: 'sudo'

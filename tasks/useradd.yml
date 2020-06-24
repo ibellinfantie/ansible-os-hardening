@@ -1,0 +1,85 @@
+---
+
+- name: Ensure group "akm" exists
+  group:
+    name: akm
+    state: present
+
+- name: Add the user bsf10919 | user-01
+  user:
+    name: bsf10919
+    comment: 'Mustafa Al Ahmad'
+    shell: /bin/bash
+    groups: wheel
+    append: yes
+
+- name: Add the user bsf9210 | user-02
+  user:
+    name: bsf9210
+    comment: 'Sudhish Nair'
+    shell: /bin/bash
+    groups: wheel
+    append: yes
+
+
+- name: Add the user bsf12114 | user-03
+  user:
+    name: bsf12114
+    comment: 'Sameer_Momin'
+    shell: /bin/bash
+    groups: wheel
+    append: yes
+
+
+
+
+- name: Add the user bsf14189 | user-04
+  user:
+    name: bsf14189
+    comment: 'Noura Alsuwailem'
+    shell: /bin/bash
+    groups: akm
+    append: yes
+
+
+- name: Add the user bsf5627 | user-05
+  user:
+    name: bsf5627
+    comment: 'Amin Al-Hashim'
+    shell: /bin/bash
+    groups: akm
+    append: yes
+
+- name: Add the user bsf11445 | user-06
+  user:
+    name: bsf11445
+    comment: 'Theyab Al-Anazi'
+    shell: /bin/bash
+    groups: akm
+    append: yes
+
+- name: Add the user bsf11496 | user-07
+  user:
+    name: bsf11445
+    comment: 'Bader Matar'
+    shell: /bin/bash
+    groups: akm
+    append: yes
+
+- name: Add the user ppmuser | user-08
+  user:
+    name: ppmuser
+    comment: 'PAR_admin'
+    shell: /bin/bash
+    groups: akm
+    append: yes
+
+
+- name: Add the user scanuser | user-09
+  user:
+    name: scanuser
+    comment: 'security scan'
+    shell: /bin/bash
+    groups: root
+    append: yes
+
