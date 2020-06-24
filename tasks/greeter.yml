@@ -1,5 +1,12 @@
 ---
 
+- name: create gdm3 directory
+  file:
+    path:  /etc/gdm3
+    state: directory
+
+
+
 - name: configure greeter
   template:
     src: 'etc/gdm3/greeter.dconf-defaults.j2'
