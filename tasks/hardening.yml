@@ -98,9 +98,6 @@
 - import_tasks: bashrc.yml
   tags: shell
 
-- import_tasks: sendmail.yml
-  tags: maild
-
 - import_tasks: chrony.yml
   tags: ntpd 
 

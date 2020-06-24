@@ -1,9 +1,0 @@
----
-
-- name: configure sendmail
-  template:
-    src: 'etc/mail/sendmail.cf.j2'
-    dest: '/etc/mail/sendmail.cf'
-    owner: 'root'
-    group: 'root'
-    mode: '0640'
