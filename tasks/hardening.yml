@@ -116,3 +116,7 @@
 
 - import_tasks: useradd.yml
   tags: user  
+
+- import_tasks: mount.yml
+  tags: filesystem
+  

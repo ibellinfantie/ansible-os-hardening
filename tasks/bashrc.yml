@@ -5,5 +5,5 @@
     dest: '/etc/bashrc'
     owner: 'root'
     group: 'root'
-    mode: '0750'
+    mode: '0644'
     

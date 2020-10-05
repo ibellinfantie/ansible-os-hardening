@@ -5,7 +5,7 @@
     dest: '/etc/profile.d/pinerolo_profile.sh'
     owner: 'root'
     group: 'root'
-    mode: '0750'
+    mode: '0644'
   when: not os_security_kernel_enable_core_dump | bool
 
 - name: remove pinerolo_profile.sh from profile.d
@@ -20,7 +20,7 @@
     dest: '/etc/profile'
     owner: 'root'
     group: 'root'
-    mode: '0750'
+    mode: '0644'
     
 - name: add colorgrep.csh and sh to profile.d
   template:
@@ -28,14 +28,14 @@
     dest: '/etc/profile.d/colorgrep.csh'
     owner: 'root'
     group: 'root'
-    mode: '0750'
+    mode: '0644'
   
   template:
     src: 'etc/profile.d/colorgrep.sh.j2'
     dest: '/etc/profile.d/colorgrep.sh'
     owner: 'root'
     group: 'root'
-    mode: '0750'
+    mode: '0644'
   
    
 - name: add colorzgrep.csh and sh to profile.d
@@ -44,14 +44,14 @@
     dest: '/etc/profile.d/colorzgrep.csh'
     owner: 'root'
     group: 'root'
-    mode: '0750'
+    mode: '0644'
 
   template:
     src: 'etc/profile.d/colorzgrep.sh.j2'
     dest: '/etc/profile.d/colorzgrep.sh'
     owner: 'root'
     group: 'root'
-    mode: '0750'
+    mode: '0644'
 
 
 - name: add colorls.csh and sh to profile.d
@@ -60,14 +60,14 @@
     dest: '/etc/profile.d/colorls.csh'
     owner: 'root'
     group: 'root'
-    mode: '0750'
+    mode: '0644'
 
   template:
     src: 'etc/profile.d/colorls.sh.j2'
     dest: '/etc/profile.d/colorls.sh'
     owner: 'root'
     group: 'root'
-    mode: '0750'
+    mode: '0644'
 
 - name: add colorxzgrep.csh and sh to profile.d
   template:
@@ -75,14 +75,14 @@
     dest: '/etc/profile.d/colorxzgrep.csh'
     owner: 'root'
     group: 'root'
-    mode: '0750'
+    mode: '0644'
 
   template:
     src: 'etc/profile.d/colorxzgrep.sh.j2'
     dest: '/etc/profile.d/colorxzgrep.sh'
     owner: 'root'
     group: 'root'
-    mode: '0750'
+    mode: '0644'
 
 - name: add gawk.csh and sh to profile.d
   template:
@@ -90,14 +90,14 @@
     dest: '/etc/profile.d/gawk.csh'
     owner: 'root'
     group: 'root'
-    mode: '0750'
+    mode: '0644'
 
   template:
     src: 'etc/profile.d/gawk.sh.j2'
     dest: '/etc/profile.d/gawk.sh'
     owner: 'root'
     group: 'root'
-    mode: '0750'
+    mode: '0644'
 
 
 - name: add lang.csh and sh to profile.d
@@ -106,14 +106,14 @@
     dest: '/etc/profile.d/lang.csh'
     owner: 'root'
     group: 'root'
-    mode: '0750'
+    mode: '0644'
 
   template:
     src: 'etc/profile.d/lang.sh.j2'
     dest: '/etc/profile.d/lang.sh'
     owner: 'root'
     group: 'root'
-    mode: '0750'
+    mode: '0644'
 
 
 
@@ -123,14 +123,14 @@
     dest: '/etc/profile.d/less.csh'
     owner: 'root'
     group: 'root'
-    mode: '0750'
+    mode: '0644'
 
   template:
     src: 'etc/profile.d/less.sh.j2'
     dest: '/etc/profile.d/less.sh'
     owner: 'root'
     group: 'root'
-    mode: '0750'
+    mode: '0644'
 
 - name: add vim.csh and sh to profile.d
   template:
@@ -138,14 +138,14 @@
     dest: '/etc/profile.d/vim.csh'
     owner: 'root'
     group: 'root'
-    mode: '0750'
+    mode: '0644'
 
   template:
     src: 'etc/profile.d/vim.sh.j2'
     dest: '/etc/profile.d/vim.sh'
     owner: 'root'
     group: 'root'
-    mode: '0750'
+    mode: '0644'
 
 - name: add which2.csh and sh to profile.d
   template:
@@ -153,12 +153,12 @@
     dest: '/etc/profile.d/which2.csh'
     owner: 'root'
     group: 'root'
-    mode: '0750'
+    mode: '0644'
 
   template:
     src: 'etc/profile.d/which2.sh.j2'
     dest: '/etc/profile.d/which2.sh'
     owner: 'root'
     group: 'root'
-    mode: '0750'
+    mode: '0644'
     

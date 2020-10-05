@@ -1,0 +1,22 @@
+---
+
+- name: configure /dev/shm mount options
+  command:
+    cmd: /usr/bin/mount -o remount,noexec /dev/shm
+
+
+- name: configure /home mount options
+  command:
+    cmd: /usr/bin/mount -o remount,nodev /home
+
+- name: configure /var/tmp mount options
+  command:
+    cmd: /usr/bin/mount -o remount,nodev,noexec,nosuid /var/tmp
+
+- name: configure /tmp mount options
+  command:
+    cmd: /usr/bin/mount -o remount,nodev,nosuid,noexec /tmp
+
+    
+
+
